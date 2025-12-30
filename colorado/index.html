@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Audit Contract - HMS</title>
+    <!--Favicon Starts-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../shared-assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../shared-assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../shared-assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../shared-assets/favicon/site.webmanifest">
+    <!--Favicon End-->
+    <!--Style Starts-->
+    <link href="../shared-assets/css/style.css" rel="stylesheet">
+    <!--Style Ends-->
+</head>
+
+<body>
+    <main role="main">
+        <!--Navigation Starts-->
+        <nav class="app-navbar navbar navbar-expand-xl navbar-dark fixed-top" role="navigation"
+            aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#" aria-label="Colorado Home">
+                    <div class="logo-icon" aria-hidden="true">
+                        <img src="../shared-assets/images/Logo.svg" alt="Logo" />
+                    </div>
+
+                </a>
+
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Overview</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                Process
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Automated Review</a></li>
+                                <li><a class="dropdown-item" href="#">Complex Review</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Scenarios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Training</a></li>
+                                <li><a class="dropdown-item" href="#">Policies & Regulations</a></li>
+                                <li><a class="dropdown-item" href="#">Approved Letters</a></li>
+                                <li><a class="dropdown-item" href="#">FAQs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn primary-btn font-sm sign-in-btn" aria-label="Sign in to HMS Portal">Sign
+                                in to HMS Portal</button>
+                        </li>
+                        <li class="nav-item" id="searchNavItem">
+                            <button class="search-icon" aria-label="Open search" id="searchIcon">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navigation Ends-->
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+            <button class="search-close" id="searchClose" aria-label="Close search">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="search-container">
+                <h2 id="searchTitle" class="sr-only">Search</h2>
+                <form class="search-input-wrapper" role="search" aria-label="Site search">
+                    <input type="search" class="search-input" placeholder="Search" aria-label="Search input"
+                        id="searchInput" autocomplete="off">
+                    <button type="submit" class="search-submit" aria-label="Submit search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="container">
+                <div class="banner-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <h1 class="hero-title">Recovery Audit Contract</h1>
+                        </div>
+                        <img src="../shared-assets/images/hms_logo.png" class="banner-logo" alt="HMS Logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-wrapper">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11">
+                            <h2><span class="text-highlight">About</span> Us</h2>
+                            <p>
+                                HMS helps healthcare organizations root out claims that are erroneous for any reason, at
+                                any stage in the claim cycle. Our payment integrity solutions address the full range of
+                                improper payments utilizing advanced analytics, leading technologies, and clinical
+                                expertise to deliver savings, compliance, and innovation. We enable plans and programs
+                                to avoid and recover improper payments, detect and prevent fraud, and ensure healthcare
+                                funds are used as intended for member care.
+                            </p>
+                            <p>
+                                HMS is proud to be recognized for excellence in healthcare technology, data security,
+                                and service delivery. Our certifications and awards—including URAC accreditation,
+                                HITRUST certification, Best in KLAS recognition, and MedTech awards—reflect our
+                                commitment to quality, compliance, and innovation in supporting recovery audit programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11">
+                            <h2><span class="text-highlight">Recovery Audit Contractor</span> (RAC) Program </h2>
+                            <p>
+                                The Medicaid Recovery Audit Contractor (RAC) program was established under the
+                                Affordable Care Act (ACA) in 2010. Its primary purpose is to reduce improper Medicaid
+                                payments by auditing provider claims to identify overpayments and underpayments. States
+                                are required to implement Medicaid RAC programs to ensure compliance with federal
+                                regulations and to improve the financial
+                                integrity of their Medicaid programs.
+                            </p>
+                            <p>
+
+                                Medicaid RAC programs serve as a critical tool for states to recover funds lost to
+                                improperly billed claims, reinvesting these resources into Medicaid budgets to sustain
+                                and enhance the program’s effectiveness. By leveraging advanced analytics, clinical
+                                expertise, and robust data mining capabilities, Medicaid RAC vendors like HMS help
+                                states achieve these objectives while educating the provider community and minimizing
+                                provider abrasion.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gray-bg section-bg-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2><span class="text-highlight">HMS Recovery</span> Audit Contracts</h2>
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="col col-12 col-md-10 col-lg-9 col-xl-7">
+                                    <img src="../shared-assets/images/audit_contracts.png" class="img-fluid"
+                                        alt="Audit Contrcts Image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="state-container">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <img src="../shared-assets/icons/rcoveries_icon.svg"
+                                            alt="Total Recoveries & Savings" />
+                                    </div>
+                                    <div>
+                                        <p class="stat-number">$11.2 Billion</p>
+                                        <p class="stat-label">Total Recoveries & Savings</p>
+                                    </div>
+                                </div>
+
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <img src="../shared-assets/icons/cost_avoidance.svg"
+                                            alt="Cost Avoidance Records Delivered" />
+                                    </div>
+                                    <div>
+                                        <p class="stat-number">21+ Million</p>
+                                        <p class="stat-label">Cost Avoidance Records Delivered</p>
+                                    </div>
+                                </div>
+
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <img src="../shared-assets/icons/clinical_review.svg"
+                                            alt="Clinical Reviews Completed" />
+                                    </div>
+                                    <div>
+                                        <p class="stat-number">210 Thousand</p>
+                                        <p class="stat-label">Clinical Reviews Completed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="section-title-big">
+                                <span class="text-highlight">Remove erroneous claims</span> at any stage.
+                            </div>
+                            <p>
+                                Our Payment Integrity solutions, also known as Program Integrity, address the full range
+                                of improper payments using advanced analytics, leading technologies, and expert
+                                clinicians. HMS deliver savings, compliance, and innovation for Medicaid, Medicare,
+                                commercial, and marketplace plans. We enable plans and programs to avoid and recover
+                                improper payments, detect and prevent fraud, and ensure healthcare funds are used as
+                                intended for member care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer" role="contentinfo" aria-label="Footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-sm-12 col-md-auto">
+                    <div class="navbar-brand">
+                        <div class="logo-icon" aria-hidden="true">
+                            <img src="../shared-assets/images/Logo.svg" alt="Logo" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md d-flex justify-content-md-end">
+                    <div class="row row-cols-1 row-cols-sm-3 row-cols-xl-auto gy-4 gx-xl-5">
+                        <div class="col">
+                            <div class="footer-menu-heading">About</div>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Overview</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="footer-menu-heading">Process</div>
+                            <ul class="footer-links">
+                                <li><a href="#">Automated Review</a></li>
+                                <li><a href="#">Complex Review</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="footer-menu-heading">Scenarios</div>
+                            <ul class="footer-links">
+                                <li><a href="#automated-review">Scenarios</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="footer-menu-heading">Resources</div>
+                            <ul class="footer-links">
+                                <li><a href="#">Training</a></li>
+                                <li><a href="#">Policies & Regulations</a></li>
+                                <li><a href="#">Approved Letters</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="footer-menu-heading">Contact</div>
+                            <ul class="footer-links">
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-xl-auto order-2 order-xl-1">
+                    <p class="mt-3 mt-xl-0 text-center mb-0">Copyright © 2025 HMS. All rights reserved.</p>
+                </div>
+                <div
+                    class="col-12 col-xl order-1 order-xl-2 bottom-footer-links d-flex justify-content-md-center justify-content-xl-end">
+                    <ul class="footer-links text-sm-center">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Conflict of Interest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Scroll to Top Starts-->
+    <div class="scroll-top" role="button" aria-label="Scroll to top" tabindex="0">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </div>
+    <!--Scroll to Top Ends-->
+    <!--Script Starts-->
+    <script src="../shared-assets/javascript/bootstrap.min.js"></script>
+    <script src="../shared-assets/javascript/jquery-3.7.1.min.js"></script>
+    <script src="../shared-assets/javascript/main.js"></script>
+    <!--Script Ends-->
+</body>
+
+</html>

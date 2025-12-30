@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-27754358-c5ba-461a-b690-77a8d9c1c937" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049 {
+        fill: none;
+        stroke: #2B3A44;
+        stroke-linejoin: round;
+        stroke-width: 3.15px;
+      }
+    </style>
+  </defs>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="42.78" y1="34.54" x2="42.78" y2="7.72"/>
+  <polyline class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" points="11.3 7.72 11.3 55.21 39.63 55.21"/>
+  <path class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" d="m18.75,4.1v3.32c0,1.46,1.18,2.64,2.65,2.64h11.84c1.46,0,2.64-1.18,2.64-2.64v-3.32"/>
+  <path class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" d="m48.05,39.25V6.62c0-1.39-1.13-2.53-2.53-2.53H9.09c-1.39,0-2.53,1.13-2.53,2.53v50.76c0,1.4,1.13,2.53,2.53,2.53h36.43c1.39,0,2.53-1.13,2.53-2.53v-5.29"/>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="26.3" y1="47.14" x2="29.33" y2="47.14"/>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="26.3" y1="38.15" x2="31.24" y2="38.15"/>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="26.3" y1="29.17" x2="38.04" y2="29.17"/>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="26.3" y1="20.1" x2="38.04" y2="20.1"/>
+  <polyline class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" points="16.47 27.93 18.77 30.7 23.91 24.5"/>
+  <polyline class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" points="16.47 18.61 18.77 21.38 23.91 15.18"/>
+  <polyline class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" points="33.91 45.45 37.22 49.44 44.62 40.52"/>
+  <rect class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x="17.48" y="35.97" width="4.42" height="4.17"/>
+  <rect class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x="17.48" y="45.05" width="4.42" height="4.17"/>
+  <circle class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" cx="39.41" cy="44.89" r="10.32"/>
+  <line class="uuid-0ba8a85b-f37c-4940-894a-5bcedd7d1049" x1="47.13" y1="50.56" x2="57.43" y2="58.19"/>
+</svg>
