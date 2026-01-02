@@ -1000,6 +1000,168 @@
 
  /* ------card Lists for Trainings  Starts-------- */
 
+ /* ------Viedos Section  Starts-------- */
+
+.filters-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .filter-label {
+            font-size: 15px;
+                min-width: 62px;
+        }
+
+        .form-select {
+            border: 1px solid #d1d5db;
+            border-radius: 1.5rem;
+            background-color: white;
+            min-width: 150px;
+        }
+
+        .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .video-card {
+            background: white;
+           border-radius: 2.813rem 0 2.813rem 0;
+            overflow: hidden;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            padding-top: 50%;
+            background: var(--dark-color);
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            background: white;
+            transform: translate(-50%, -50%) scale(1.1);
+            cursor: default;
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 20px solid var(--primary-color);
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .video-content {
+            padding: 1.7rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+              line-height: 2rem;
+            font-weight: normal;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-date {
+            font-size: 0.938rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .watch-link {
+            color: var(--contrast-blue);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin-top: auto;
+            transition: color 0.2s;
+        }
+
+        .watch-link:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            margin-top: 3rem;
+        }
+
+        .page-link {
+            color: var(--dark-color);
+            font-weight: 600;
+            border: none;
+            margin: 0 0.25rem;
+            border-radius: 50%;
+            height: 45px;
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page-item:last-child .page-link, .page-item:first-child .page-link {
+            font-size: 2rem;
+        }
+
+        .page-link:hover {
+            background-color: var(--dark-color);
+            color: #fff;
+        }
+
+        .page-item.active .page-link {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #6b7280;
+        }
+
+/* ------Viedos Section  Starts-------- */
+
  /***Media Queries***/
  @media (max-width: 575px) {
      .bottom-footer-links ul li {

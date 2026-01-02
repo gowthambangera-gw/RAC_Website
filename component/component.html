@@ -42,23 +42,6 @@
                         <li class="nav-item ">
                             <a class="nav-link active" href="#">Component</a>
                         </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                Process
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Automated Review</a></li>
-                                <li><a class="dropdown-item" href="#">Complex Review</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <button class="btn primary-btn font-sm sign-in-btn" aria-label="Sign in to HMS Portal">Sign
-                                in to HMS Portal</button>
-                        </li>
-
                     </ul>
                 </div>
             </div>
@@ -222,6 +205,7 @@
             </section>
             <section>
                 <div class="container">
+                   
                     <h2><span class="text-highlight">Upcoming Live</span> Trainings</h2>
                     <div class="row">
                         <div class="col-10">
@@ -270,6 +254,42 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+             <section class="gray-bg py-5">
+                <div class="container">
+                     <div class="row">
+                        <div class="col"><h2><span class="text-highlight">Training Videos</h2></div>
+                        <div class="col-auto">
+                             <div class="filters-section">
+            <label class="filter-label">Filter by:</label>
+            <select class="form-select" id="typeFilter" aria-label="Filter videos by type">
+                <option value="all">All</option>
+                <option value="portal">Portal</option>
+                <option value="automated">Automated</option>
+                <option value="complex">Complex</option>
+                <option value="general">General</option>
+            </select>
+        </div>
+
+                        </div>
+                    </div>
+                    
+                  <p class="mb-4">Explore our library of past training sessions. These recordings offer valuable insights to help navigate the RAC program effectively.</p>
+
+
+
+                <div id="videoContainer" class="row g-5">
+                    <!-- Videos will be rendered here -->
+                </div>
+
+            <nav id="paginationContainer" style="display: none;">
+                <ul class="pagination justify-content-center">
+                    <!-- Pagination will be rendered here -->
+                </ul>
+            </nav>
+
+
                 </div>
             </section>
         </div>
@@ -350,6 +370,128 @@
     <script src="../shared-assets/javascript/jquery-3.7.1.min.js"></script>
     <script src="../shared-assets/javascript/main.js"></script>
     <!--Script Ends-->
+
+    <script>
+      
+        const videos = [
+            { id: 1, title: '01-Provider Portal Intro', date: '01/03/2025', type: 'portal', thumbnail: 'https://www.gainwelltechnologies.com/wp-content/uploads/2025/10/Frame-1707480836.png?w=960&h=900&crop=1' },
+            { id: 2, title: '02-Provider Portal Registration', date: '01/03/2025', type: 'portal', thumbnail: 'https://www.gainwelltechnologies.com/wp-content/uploads/2025/11/NAMD-Video-Thumbnail-1448x852-1.png?w=1200&h=852&crop=1' },
+            { id: 3, title: '03-Provider Portal-Log Into', date: '01/03/2025', type: 'portal', thumbnail: '../shared-assets/images/videos_thumbnail.png' },
+            { id: 4, title: '04-Provider Portal View/', date: '01/03/2025', type: 'automated', thumbnail: 'https://www.gainwelltechnologies.com/wp-content/uploads/2025/10/Frame-1707480836.png?w=960&h=900&crop=1' },
+            { id: 5, title: '05-Provider Portal-Upload', date: '01/03/2025', type: 'complex', thumbnail: 'https://www.gainwelltechnologies.com/wp-content/uploads/2025/11/NAMD-Video-Thumbnail-1448x852-1.png?w=1200&h=852&crop=1' },
+            { id: 6, title: '06-Provider Portal-View/S', date: '01/03/2025', type: 'general', thumbnail: '../shared-assets/images/videos_thumbnail.png' },
+            { id: 7, title: '07-Provider Portal Advanced', date: '01/03/2025', type: 'portal', thumbnail: 'https://www.gainwelltechnologies.com/wp-content/uploads/2025/10/Frame-1707480836.png?w=960&h=900&crop=1' },
+            { id: 8, title: '08-Provider Portal FAQ', date: '01/03/2025', type: 'general', thumbnail: '../shared-assets/images/videos_thumbnail.png' }
+        ];
+
+        let currentPage = 1;
+        const videosPerPage = 6;
+
+        function filterVideos() {
+            const type = document.getElementById('typeFilter').value;
+
+            return videos.filter(video => {
+                const typeMatch = type === 'all' || video.type === type;
+                return typeMatch;
+            });
+        }
+
+        function renderVideos() {
+            const filteredVideos = filterVideos();
+            const container = document.getElementById('videoContainer');
+            const paginationContainer = document.getElementById('paginationContainer');
+
+            if (filteredVideos.length === 0) {
+                container.innerHTML = '<div class="col-12"><div class="no-results"><h4>No videos found</h4><p>Try adjusting your filters</p></div></div>';
+                paginationContainer.style.display = 'none';
+                return;
+            }
+
+            const startIndex = (currentPage - 1) * videosPerPage;
+            const endIndex = startIndex + videosPerPage;
+            const videosToShow = filteredVideos.slice(startIndex, endIndex);
+
+            container.innerHTML = videosToShow.map(video => `
+                <div class="col-md-6 col-lg-4">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="${video.thumbnail}" alt="${video.title}">
+                            <div class="play-button">
+                                <div class="play-icon"></div>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">${video.title}</h3>
+                            <p class="video-date">Updated on: ${video.date}</p>
+                            <a href="#" class="watch-link">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            renderPagination(filteredVideos.length);
+        }
+
+        function renderPagination(totalVideos) {
+            const paginationContainer = document.getElementById('paginationContainer');
+            const totalPages = Math.ceil(totalVideos / videosPerPage);
+
+            if (totalPages <= 1) {
+                paginationContainer.style.display = 'none';
+                return;
+            }
+
+            paginationContainer.style.display = 'block';
+            const pagination = paginationContainer.querySelector('.pagination');
+            
+            let html = '';
+
+            // Previous button
+            html += `
+                <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                    <a class="page-link" href="#" onclick="changePage(${currentPage - 1}); return false;">‹</a>
+                </li>
+            `;
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                html += `
+                    <li class="page-item ${currentPage === i ? 'active' : ''}">
+                        <a class="page-link" href="#" onclick="changePage(${i}); return false;">${i}</a>
+                    </li>
+                `;
+            }
+
+            // Next button
+            html += `
+                <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                    <a class="page-link" href="#" onclick="changePage(${currentPage + 1}); return false;">›</a>
+                </li>
+            `;
+
+            pagination.innerHTML = html;
+        }
+
+        function changePage(page) {
+            const filteredVideos = filterVideos();
+            const totalPages = Math.ceil(filteredVideos.length / videosPerPage);
+            
+            if (page < 1 || page > totalPages) return;
+            
+            currentPage = page;
+            renderVideos();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Event listeners for filters
+        document.getElementById('typeFilter').addEventListener('change', () => {
+            currentPage = 1;
+            renderVideos();
+        });
+
+        // Initial render
+        renderVideos();
+    </script>
 </body>
 
 </html>
