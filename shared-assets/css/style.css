@@ -1065,13 +1065,14 @@
             transform: translate(-50%, -50%);
             width: 60px;
             height: 60px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s;
+            border: 1px solid #fff;
         }
 
         .play-button:hover {
@@ -1129,21 +1130,11 @@
         }
 
         .page-link {
-            color: var(--dark-color);
-            font-weight: 600;
-            border: none;
-            margin: 0 0.25rem;
-            border-radius: 50%;
-            height: 45px;
-            width: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: var(--dark-color);  
+            padding-left: 15px;
+             padding-right: 15px;
         }
-        .page-item:last-child .page-link, .page-item:first-child .page-link {
-            font-size: 2rem;
-        }
-
+       
         .page-link:hover {
             background-color: var(--dark-color);
             color: #fff;
@@ -1152,7 +1143,8 @@
         .page-item.active .page-link {
             background-color: var(--primary-color);
             color: white;
-        }
+            border:  var(--primary-color);
+        } 
 
         .no-results {
             text-align: center;
