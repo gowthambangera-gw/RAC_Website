@@ -44,7 +44,8 @@
 
  h2,
  h3,
- h4 {
+ h4,
+ h5 {
      margin: 0;
      padding: 0;
      font-weight: 500;
@@ -67,7 +68,11 @@
      font-size: 1.5rem;
      margin-bottom: 1.5rem;
  }
+ h5 {
 
+     font-size: 1.2rem;
+     margin-bottom: 1.2rem;
+ }
  .section-title-big {
      font-size: 2.5rem;
      margin-bottom: 2.813rem;
@@ -94,7 +99,9 @@
  .section-bg-padding {
      padding: 3.125rem 0;
  }
-
+.fw-500 {
+    font-weight: 500;
+}
  /***Typography***/
  .font-sm {
      font-size: 0.938rem;
@@ -319,6 +326,46 @@
  .app-navbar .navbar-collapse {
      transition: all 0.3s ease;
  }
+
+ /***Clickable Chart***/
+ .flow-wrapper {
+  position: relative;
+  max-width: 1200px;
+}
+
+.flow-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Clickable areas */
+.hotspot {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  cursor: pointer;
+}
+
+/* Positioning */
+.step1 { left: 2%;  width: 17%; }
+.step2 { left: 21%; width: 17%; }
+.step3 { left: 40%; width: 17%; }
+.step4 { left: 59%; width: 17%; }
+.step5 { left: 78%; width: 17%; }
+
+/* Keyboard focus styles (WCAG 2.4.7) */
+.hotspot:focus-visible {
+  outline: 3px solid #5b3cc4;
+  outline-offset: 4px;
+  background-color: rgba(91, 60, 196, 0.15);
+}
+
+/* Optional hover for mouse users */
+.hotspot:hover {
+  background-color: rgba(91, 60, 196, 0.1);
+}
+
 
  @media (max-width: 1199px) {
      .app-navbar .navbar-collapse {
@@ -1192,7 +1239,10 @@
      h4 {
          font-size: 1.3rem;
      }
-
+ h5 {
+         font-size: 1.1rem;
+     }
+     
 
      .section-title-big,
      .stat-number {
