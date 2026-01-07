@@ -1290,3 +1290,70 @@
          font-size: 15px;
      }
  }
+
+/* accoordion style */
+ .app-accordion .accordion{
+    border-bottom: 1px solid #00EEAE;
+ }
+
+ .app-accordion .accordion-item{
+    border: none;
+    border-top: 1px solid #00EEAE;
+    border-radius: 0px;
+    padding: 10px 0px;
+ }
+
+.app-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.app-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.app-accordion .accordion-button {
+    font-weight: 500;
+    color: #000 !important;
+    font-size: 19px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.app-accordion .accordion-body {
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.app-accordion .accordion-button span {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-color: #00EEAE;
+    border-radius: 999px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 19px;
+}
+
+.app-accordion .accordion-button::after {
+    background-image: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #000;
+    right: 5px;
+    position: absolute;
+}
+
+
+.app-accordion .accordion-button:not(.collapsed)::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #00EEAE;
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+/* accoordion style end*/
