@@ -46,7 +46,7 @@ class AccordionGenerator {
 }
 
 // Self-initializing on DOM ready
-const init = () => new AccordionGenerator('accordionExample', accordionData);
+const init = () => new AccordionGenerator('accordionFaqs', accordionData);
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

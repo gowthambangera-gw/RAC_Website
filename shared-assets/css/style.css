@@ -209,7 +209,6 @@
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
      border-radius: 40px 0;
      margin-top: 0;
-
      display: none;
  }
 
@@ -350,29 +349,43 @@
      height: 85%;
      cursor: pointer;
  }
-
+.automated-hotspot {
+ top: 11%;
+}
  /* Positioning */
- .step_1, .step_2, .step_3, .step_4, .step_5 {
+ .complex-step_1, .complex-step_2, .complex-step_3, .complex-step_4, .complex-step_5,
+ .automated-step_1, .automated-step_2, .automated-step_3 {
      width: 17.8%;
  }
- .step_1 {
+ .complex-step_1 {
      left: 11%;
  }
 
- .step_2 {
+ .complex-step_2 {
      left: 28.8%;
  }
 
- .step_3 {
+ .complex-step_3 {
      left: 46.6%;
  }
 
- .step_4 {
+ .complex-step_4 {
      left: 64.4%;
 }
 
- .step_5 {
+ .complex-step_5 {
      left: 82.2%;
+ }
+  .automated-step_1 {
+     left: 22%;
+ }
+
+ .automated-step_2 {
+     left: 45.8%;
+ }
+
+ .automated-step_3 {
+     left: 70.6%;
  }
 
  /* Keyboard focus styles (WCAG 2.4.7) */
@@ -1247,6 +1260,72 @@
  }
 
  /* ------Viedos Section  Starts-------- */
+ 
+/* accoordion style */
+ .app-accordion .accordion{
+    border-bottom: 1px solid var(--secondary-color);
+ }
+
+ .app-accordion .accordion-item{
+    border: none;
+    border-top: 1px solid var(--secondary-color);
+    padding: 10px 0px;
+    border-radius: 0;
+ }
+
+.app-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.app-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.app-accordion .accordion-button {
+    font-weight: 500;
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.app-accordion .accordion-body {
+    padding: 20px 50px;
+}
+
+.app-accordion .accordion-button span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-15px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.app-accordion .accordion-button::after {
+    background-image: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--dark-color);
+    right: 5px;
+    position: absolute;
+}
+
+
+.app-accordion .accordion-button:not(.collapsed)::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--secondary-color);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+/* accoordion style end*/
 
  /***Media Queries***/
  @media (max-width: 575px) {
@@ -1338,70 +1417,3 @@
          font-size: 15px;
      }
  }
-
-/* accoordion style */
- .app-accordion .accordion{
-    border-bottom: 1px solid #00EEAE;
- }
-
- .app-accordion .accordion-item{
-    border: none;
-    border-top: 1px solid #00EEAE;
-    border-radius: 0px;
-    padding: 10px 0px;
- }
-
-.app-accordion .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.app-accordion .accordion-button:focus {
-    box-shadow: none;
-}
-
-.app-accordion .accordion-button {
-    font-weight: 500;
-    color: #000 !important;
-    font-size: 19px;
-    position: relative;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.app-accordion .accordion-body {
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.app-accordion .accordion-button span {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    background-color: #00EEAE;
-    border-radius: 999px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    padding-top: 2px;
-    font-size: 19px;
-}
-
-.app-accordion .accordion-button::after {
-    background-image: none;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid #000;
-    right: 5px;
-    position: absolute;
-}
-
-
-.app-accordion .accordion-button:not(.collapsed)::after {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid #00EEAE;
-    transform: var(--bs-accordion-btn-icon-transform);
-}
-/* accoordion style end*/

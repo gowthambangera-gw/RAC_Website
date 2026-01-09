@@ -48,8 +48,8 @@
                                 Process
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="#">Automated Review</a></li>
-                                <li><a class="dropdown-item" href="complex_review.html">Complex Review</a></li>
+                                <li><a class="dropdown-item" href="automated_review.html">Automated Review</a></li>
+                                <li><a class="dropdown-item active" href="#">Complex Review</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -86,25 +86,33 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-12 col-xl-10">
-                            <h2><span class="text-highlight">Automated </span>Review</h2>
+                            <h2><span class="text-highlight">Complex </span>Review</h2>
                             <p>
-                               In accordance with state audit requirements, the diagram provides the major steps that comprise both Automated Reviews and Complex Reviews performed by HMS on behalf of their state clients. 
+                                In accordance with state audit requirements, the diagram provides the major steps that
+                                comprise both Automated Reviews and Complex Reviews performed by HMS on behalf of their
+                                state clients.
                             </p>
-                            <div class="flow-wrapper" role="navigation" aria-label="Automated Review Process">
-                                <img src="../shared-assets/images/automated_review.svg"
-                                    alt="Automated Review process: Preliminary Finding, Informal Reconsideration, Appeal" />
+                            <div class="flow-wrapper" role="navigation" aria-label="Complex Review Process">
+                                <img src="../shared-assets/images/complex_review.svg"
+                                    alt="Complex Review process: Medical Records Request, Preliminary Finding, Exit Conference, Informal Reconsideration, Appeal" />
 
-                                <a href="automated-preliminary-finding.html" class="hotspot automated-hotspot automated-step_1"
-                                    aria-label="Step 1: Preliminary Finding">
+                                <a href="complex-medical-records.html" class="hotspot complex-step_1"
+                                    aria-label="Step 1: Medical Records Request">
                                 </a>
 
-                                <a href="automated-informal-reconsideration.html" class="hotspot automated-hotspot automated-step_2"
-                                    aria-label="Step 2: Informal Reconsideration">
+                                <a href="complex-preliminary-finding.html" class="hotspot complex-step_2"
+                                    aria-label="Step 2: Preliminary Finding">
                                 </a>
 
-                                <a href="automated-appeal.html" class="hotspot automated-hotspot automated-step_3" aria-label="Step 3: Appeal">
+                                <a href="complex-exit-conference.html" class="hotspot complex-step_3" aria-label="Step 3: Exit Conference">
                                 </a>
 
+                                <a href="complex-informal-reconsideration" class="hotspot complex-step_4"
+                                    aria-label="Step 4: Informal Reconsideration">
+                                </a>
+
+                                <a href="complex-appeal.html" class="hotspot complex-step_5" aria-label="Step 5: Appeal">
+                                </a>
                             </div>
                             <div class="col d-flex justify-content-center">
                                 <div class="flow-notifications">
@@ -121,70 +129,131 @@
                     <div class="row">
                         <div class="col-12 col-lg-11">
                             <h3><span class="text-highlight">Audit</span> Parameters</h3>
-                            <h4>Audit Frequency Limit</h4>
+                            <h4>Lookback period for Audits</h4>
                             <p>
-                                Automated Audits cannot look at claims more than three (3) years after the timely filing deadline.  The timely filing period extends 365 days after the date of service.
+                                Complex Audits cannot look at claims more than three (3) years after the timely filing
+                                deadline. The timely filing period extends 365 days after the date of service.
                             </p>
-                            <p>A provider will receive no more than four (4) Automated Audits per year.</p>
-                            <p>A single Automated Audit is comprised of the following components:</p>
                             <ul class="list-style">
-                                <li>The Audit Concept – a short description of what the audit is reviewing, e.g., Behavioral Health Professional Duplicates, EMT Trips to with No Transport, ABA Therapy Initial Assessments Conducted more than Once Per Year, Home and Community Based Services Delivered While Inpatient, Unbundling Laboratory Tests That Should be Bundled, etc.</li>
-                                <li>The Audit Scenario – a summary of the audit concept, the provider type(s) impacted, the general rules, policies, and clinical guidelines comprising the criteria that will be used to conduct the audit reviews, specific codes that will be reviewed</li>
-                                <li>The percentage of claims reviews per all locations of a provider, identified by the provider billing ID, based on the statutory limits that apply over the course of a calendar year</li>
+                                <li>Claims are subject to RAC audit if the date of service was within the last four (4)
+                                    years but not within the last 365 days. This time period takes into account the date
+                                    of service and the additional 365 day timely filing period that the statute states.
+                                    Claims with a date of service within the last 365 days are still within the timely
+                                    filing period, but are considered active and not subject to RAC audit. </li>
                             </ul>
                         </div>
-                        
+                        <div class="col-12 col-lg-11 mt-3 ms-3">
+                            <h5>Examples</h5>
+                            <p>If today is August 24, 2025:</p>
+                            <ul class="list-style">
+                                <li>Claims from August 24, 2021, to August 23, 2024, fall within the RAC audit look-back
+                                    period.</li>
+                                <li>Claims from August 24, 2024, to August 24, 2025, are still within the timely filing
+                                    period and would not be included in a RAC audit.</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-11">
+                            <p>
+                                <strong class="fw-500">NOTE:</strong> Department may conduct a RAC audit of older claims
+                                if required or requested by a federal agency such as the Centers for Medicare and
+                                Medicaid Services (CMS) or the Office of the Inspector General (OIG), or if there is a
+                                potential impact to the Colorado State general fund.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 col-lg-11">
-                            <h4 class="mt-5">Monthly Claim Review Limits Determination</h4>
-                            <p>Per statute, each month only a percentage of a provider’s claims can be reviewed through Automated Audits (see table below). The exact percentage is based on the total Medicaid reimbursement a provider received in the previous state fiscal year (July 1 – June 30). These limits are updated every year on September 1.</p>
+                            <h4 class="mt-5">Audit Frequency Limit</h4>
+                            <p>A provider cannot will receive no more than three (3) Complex Audits per year.</p>
                         </div>
                     </div>
-                    
+                    <div class="row">
+                        <div class="col-12 col-lg-11">
+                            <h4 class="mt-5">Complex Audit Definition</h4>
+                            <p>A single Complex Audit is comprised of the following three components: </p>
+                            <ul class="list-style">
+                                <li>
+                                    The Audit Concept – a short description of what the audit is reviewing, e.g.,
+                                    Readmission, Inpatient Behavioral Health, Inpatient Rehab, Place of Service/DRG,
+                                    Outpatient EAPG
+                                </li>
+                                <li>The Audit Scenario – a summary of the audit concept, the provider type(s) impacted,
+                                    the general rules, policies, and clinical guidelines comprising the criteria that
+                                    will be used to conduct the audit reviews, and specific codes that will be reviewed
+                                </li>
+                                <li>The Medical Records Requests related to that Audit Concept and Scenario</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-lg-11">
+                            <h4 class="mt-5">Monthly Medical Records Request Mailing Limit Determination</h4>
+                            <p>Medical Record Request statutory limits are based on the total Medicaid reimbursement a
+                                provider received in the previous state fiscal year (July 1 – June 30). These limits are
+                                updated every year on September 1.
+                            </p>
+                            <p>
+                                The maximum number of Medical Records a provider may be asked for each month must be
+                                clearly communicated to providers and reviewed every year by [Department].
+                            </p>
+                        </div>
+                    </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <h4 class="mt-5">Mailing Limits</h4>
-                             <div class="row">
-                        <div class="col-12 col-lg-11">
-                            <p class="mb-4">The maximum number of Automated audits a provider can undergo for each year must be clearly communicated to providers and reviewed every year by [Department].</p>
-</div>
-</div>
+                            <h4 class="mt-5">Monthly Medical Record Request Tiers - Complex Audits</h4>
                             <div class="table-container">
                                 <div class="app-table table-responsive">
                                     <table>
                                         <thead>
                                             <tr>
                                                 <th scope="col" width="200px">Tiers</th>
-                                                <th scope="col" width="500px">Provider Medicaid Revenue (Previous SFY) </th>
-                                                <th scope="col" width="500px">Max % Claim Mailing Annually Based
-on Previous SFY Medicaid Revenue </th>
+                                                <th scope="col" width="500px">Provider Medicaid Revenue (Previous SFY,
+                                                    updated
+                                                    on 9/1 annually)
+                                                </th>
+                                                <th scope="col" width="400px">Max Medical Record Requests
+                                                    per Month</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Tier 1</td>
-                                                <td>Over $10 million</td>
-                                                <td>2.92%</td>
+                                                <td>$250 million or more</td>
+                                                <td>600</td>
                                             </tr>
                                             <tr>
                                                 <td>Tier 2</td>
-                                                <td>$4 million – $10 million</td>
-                                                <td>2.50%</td>
+                                                <td>$70M – $249.9M</td>
+                                                <td>400</td>
                                             </tr>
                                             <tr>
                                                 <td>Tier 3</td>
-                                                <td>$1 million – $3.9 million</td>
-                                                <td>2.08%</td>
+                                                <td>$40M – $69.9M</td>
+                                                <td>200</td>
                                             </tr>
                                             <tr>
                                                 <td>Tier 4</td>
-                                                <td>Less than $1 million</td>
-                                                <td>1.67%</td>
+                                                <td>$20M – $39.9M</td>
+                                                <td>100</td>
                                             </tr>
-                                          
+                                            <tr>
+                                                <td>Tier 5</td>
+                                                <td>$10M – $19.9M</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tier 6</td>
+                                                <td>$1M – $9.9M</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tier 7</td>
+                                                <td>Less than $1M</td>
+                                                <td>20</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
