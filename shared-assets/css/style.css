@@ -426,7 +426,10 @@
      border-bottom: 10px solid #F4E028;
      position: absolute;
  }
-
+/***Breadcrumbs***/
+.breadcrumb {
+    margin-bottom: 35px;
+}
  @media (max-width: 1199px) {
      .app-navbar .navbar-collapse {
          background: #1931e3;
