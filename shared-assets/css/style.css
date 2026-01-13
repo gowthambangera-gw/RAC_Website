@@ -1510,3 +1510,57 @@
 .app-gray-card .card-text{
     font-size: 1.1rem;
 }
+
+/* app-search-box for Dynamic table */
+.app-search-box {
+  max-width: 400px;
+}
+
+.app-search-box .search-form{
+border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.app-search-box .search-form .form-group {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+.app-search-box .search-form .form-group #s {
+  padding-right: 50px;
+  background: #f7f7f7;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-search-box .search-form .icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.app-search-box .search-input-container {
+    position: relative;
+    display: inline-block; 
+    margin: 0; 
+}
+
+.app-search-box .search-input-container .search-icon {
+    position: absolute;
+    right: 8px; 
+    top: 0px;
+    height : 100%; 
+    pointer-events: none; 
+}
+
+.app-table .table-container {
+  order: 1; 
+}
+
+.pagination-container {
+  order: 2;
+}
