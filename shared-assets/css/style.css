@@ -112,6 +112,30 @@
 .text-white {
     color: #fff;
 }
+ul.second-lvl-list li::before {
+    background-color: var(--dark-color);
+}
+ul.third-lvl-list li::before {
+    background-color: #fff;
+    border: 1px solid var(--dark-color);
+}
+.green-border {
+    border-color: var(--secondary-color) !important;
+}
+.red-border {
+    border-color: #FF0000 !important;
+}
+
+.readonly-value {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.gray-card {
+    background-color: #f1f1f1;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
  /***Typography***/
  .font-sm {
      font-size: 0.938rem;
@@ -1353,6 +1377,115 @@
 }
 /* accoordion style end*/
 
+/***Readonly Form Value***/
+.app-readanly-group {
+    margin-bottom: 20px;
+}
+.app-readanly-group label {
+    font-size: 0.938rem;
+    margin-bottom: 5px;
+    color: #2e307a;
+}
+
+.app-readanly-group .value {
+    font-weight: 500;
+}
+
+
+ /* app-contact-card start here */
+.app-contact-card .app-badge-sec{
+   margin-bottom: 1.2rem;
+}  
+.app-contact-card .app-badge-sec img{
+    height: 30px;
+    margin-right: 6px;
+}
+
+.app-contact-card .app-badge-sec .badge {
+    border-radius: 180px;
+    padding: 7px 15px;
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+.app-contact-card .app-readanly-group:last-child {
+    margin-bottom: 0;
+}
+
+.portal-badge .badge {
+    background-color: #f6f2fe;
+    color: #7f4aeb;
+}
+
+.phone-badge .badge {
+    background-color: #1294ad17;
+    color: #0f788d;
+}
+
+.email-badge .badge{
+    background-color: #f3b34e17;
+    color: #8a5a00;
+    border: 1px solid #f3b34e17;
+}
+
+
+/* app-search-box for Dynamic table */
+.app-search-box {
+  max-width: 400px;
+}
+
+.app-search-box .search-form{
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.app-search-box .search-form .form-group {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+.app-search-box .search-form .form-group #s {
+  padding-right: 50px;
+  background: #f7f7f7;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-search-box .search-form .icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.app-search-box .search-input-container {
+    position: relative;
+    display: inline-block; 
+    margin: 0; 
+}
+
+.app-search-box .search-input-container .search-icon {
+    position: absolute;
+    right: 8px; 
+    top: 0px;
+    height : 100%; 
+    pointer-events: none; 
+}
+
+.app-search-box .search-input-container .form-control::placeholder {
+        color: rgba(0, 0, 0, 0.35);
+        opacity: 1;
+    }
+
+.app-table .table-container {
+  order: 1; 
+}
+
+.pagination-container {
+  order: 2;
+}
  /***Media Queries***/
  @media (max-width: 575px) {
      .bottom-footer-links ul li {
@@ -1444,156 +1577,7 @@
          font-size: 15px;
      }
  }
-
- /* app-contact-card start here */
-.app-contact-card .app-badge-sec{
-   margin-bottom: 1.2rem;
-}  
-
-.app-contact-card .card{
-  border: 1px solid var(--contrast-blue);
-  margin-bottom: calc(var(--bs-gutter-x) * 1);
-  height: calc(100% - 25px);
-  border-radius: 25px 0 25px;
-}
-
-.app-contact-card .app-badge-sec img{
-    height: 30px;
-    margin-right: 6px;
-    transform: translatey(-3px);
-}
-
-.app-contact-card .app-badge-sec .badge {
-    border-radius: 180px;
-    padding: 7px 15px;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.app-contact-card .card-subtitle {
-    font-size: 14.5px;
-    font-weight: 400;
-    margin-bottom: 0.2rem;
-    color: #2e307a;
-}
-
-.app-contact-card .card-secondary-text {
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.app-contact-card .card-link {
-    color: #1931e3;
-    font-weight: 600;
-    font-size: 17px;
-}
-
-.portal-badge .badge {
-    background-color: #f6f2fe;
-    color: #7f4aeb;
-}
-
-.phone-badge .badge {
-    background-color: #1294ad17;
-    color: #0f788d;
-}
-
-.email-badge .badge{
-    background-color: #f3b34e17;
-    color: #8a5a00;
-    border: 1px solid #f3b34e17;
-}
-
-
-/* app-gray-card start here */
-.app-gray-card .card {
-    background-color: #f9f9f9;
-    border: none;
-    border-radius: 15px;
-    padding: 14px;
-    margin-bottom: calc(var(--bs-gutter-x) * 1);
-    height: calc(100% - 25px);
-}
-
-.app-gray-card .card-title {
-    margin-bottom: 20px;
-}
-
-.app-gray-card .card-link {
-    color: #1931e3;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.app-gray-card {
-    padding-top: 80px;
-}
-
-.app-gray-card .card-text{
-    font-size: 1.1rem;
-}
-
-/* app-search-box for Dynamic table */
-.app-search-box {
-  max-width: 400px;
-}
-
-.app-search-box .search-form{
-  border: 2px solid #000;
-  border-radius: 8px;
-}
-
-.app-search-box .search-form .form-group {
-  position: relative;
-  margin: 0;
-  width: 100%;
-}
-
-.app-search-box .search-form .form-group #s {
-  padding-right: 50px;
-  background: #f7f7f7;
-  padding: 10px;
-  border: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.app-search-box .search-form .icon {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-.app-search-box .search-input-container {
-    position: relative;
-    display: inline-block; 
-    margin: 0; 
-}
-
-.app-search-box .search-input-container .search-icon {
-    position: absolute;
-    right: 8px; 
-    top: 0px;
-    height : 100%; 
-    pointer-events: none; 
-}
-
-.app-search-box .search-input-container .form-control::placeholder {
-        color: rgba(0, 0, 0, 0.35);
-        opacity: 1;
-    }
-
-.app-table .table-container {
-  order: 1; 
-}
-
-.pagination-container {
-  order: 2;
-}
-
-
+ 
 @media screen and (max-width: 400px) {
     /* This rule activates only on small screens (like iPhone SE/Mobile S 320px) */
     .app-search-box .search-input-container .form-control {
