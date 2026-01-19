@@ -44,16 +44,16 @@
                             <a class="nav-link" href="overview.html">Overview</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
                                 Process
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="automated_review.html">Automated Review</a></li>
+                                <li><a class="dropdown-item" href="automated_review.html">Automated Review</a></li>
                                 <li><a class="dropdown-item" href="complex_review.html">Complex Review</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="scenario.html">Scenarios</a>
+                            <a class="nav-link active" href="#">Scenarios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
@@ -81,74 +81,28 @@
         </nav>
         <!--Navigation Ends-->
 
-        <div class="main-wrapper inner-screen-wrapper">
-            <section>
+       <div class="main-wrapper inner-screen-wrapper">
 
+            <section class="scenario-section">
                 <div class="container">
+                    <h2 ><span class="text-highlight">Department of Healthcare Policy</span> and Financing Approved RAC Scenarios</h2>
                     <div class="row">
                         <div class="col-12">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="automated_review.html">Automated Review</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Preliminary Finding</li>
-                                </ol>
+                            <!-- This is the target container for the JS code -->
+                            <div id="scenarioTableContainer">
+                                <!-- The JavaScript will populate this div -->
+                            </div>
+                            <nav class="table-pagination app-pagination mt-4" style="display: none;" aria-label="Table pagination">
+                                <ul class="pagination justify-content-center">
+                                    <!-- Pagination will be rendered here -->
+                                </ul>
                             </nav>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-xl-11">
-                            <h2><span class="text-highlight">Preliminary </span>Finding</h2>
-                            <p>
-                                You will receive a notification of preliminary findings once HMS and [Department]
-                                determine there is a potential overpayment. This is not an overpayment determination or
-                                notice of adverse action, and there has been no discovery of an overpayment pursuant to
-                                42 C.F.R. § 433.316. These are preliminary findings of a potential overpayment only.
-                            </p>
-                            <p>This notice will include the dates of service that were included in the audit. Providers
-                                will have <strong>30 days</strong> from the date they receive the Notice of Preliminary
-                                Findings to do the following: </p>
-                        </div>
-                    </div>
-
-                    <div class="row row-cols-1 row-cols-md-2 gy-4 mt-4">
-
-                        <div class="col">
-                            <div class="app-card card h-100">
-                                <div class="card-body">
-                                    <div class="card-title">Automated Audit</div>
-                                    <p class="card-text">Identify claims in the HMS Provider Portal that they disagree
-                                        with and would like to discuss in an Informal Reconsideration Meeting. An
-                                        Informal Reconsideration is required for providers to have Formal Appeal Rights.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="app-card card h-100">
-                                <div class="card-body">
-                                    <div class="card-title">Complex Audit</div>
-                                    <p class="card-text">
-                                    <ul class="list-style">
-                                        <li>Identify claims in the HMS Provider Portal that they disagree with and would
-                                            like to discuss during an Exit conference. Exit Conferences are optional and
-                                            not required for providers to move to an Informal Reconsideration or Formal
-                                            Appeal.</li>
-                                        <li>Identify claims in the HMS Provider Portal that they disagree with and would
-                                            like to discuss in an Informal Reconsideration Meeting. An Informal
-                                            Reconsideration is required for providers to have Formal Appeal Rights.</li>
-                                    </ul>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
-
-        </div>
+</div>
     </main>
     <footer class="site-footer" role="contentinfo" aria-label="Footer">
         <div class="container">
@@ -225,7 +179,8 @@
     <script src="../shared-assets/javascript/bootstrap.min.js"></script>
     <script src="../shared-assets/javascript/jquery-3.7.1.min.js"></script>
     <script src="../shared-assets/javascript/main.js"></script>
+    <script src="../shared-assets/javascript/colorado_training/scenario-table-data.js"></script>
+    <script src="../shared-assets/javascript/dynamic-table.js"></script>
     <!--Script Ends-->
 </body>
-
 </html>

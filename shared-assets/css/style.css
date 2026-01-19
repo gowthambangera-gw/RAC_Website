@@ -965,7 +965,7 @@
      font-size: 1.42rem;
      margin-bottom: 20px;
      font-weight: 500;
-
+     padding-right: 38px;
  }
 
  .dark-blue-bg {
@@ -1053,7 +1053,24 @@
  .app-table tbody td {
      padding: 15px 20px;
      color: var(--dark-color);
+     vertical-align: top;
  }
+
+ .app-table ol, .app-table ul {
+    padding-left: 23px;
+}
+
+ .app-table .list-style li:before {
+    left: -19px;
+}
+
+.app-table .list-style li {
+    margin-bottom: 0rem !important;
+}
+
+.app-table dl, .app-table ol, .app-table ul {
+    margin-bottom: 0rem !important;
+}
 
  /* Responsive scrollbar styling */
  .table-container::-webkit-scrollbar {
@@ -1387,6 +1404,7 @@
 
      .app-card.card .card-body .card-title {
          font-size: 1.4rem;
+
      }
 
      .hero-section {
@@ -1440,9 +1458,9 @@
 }
 
 .app-contact-card .app-badge-sec img{
-  height: 24px;
-  margin-right: 10px;
-  transform: translatey(-4px);
+    height: 30px;
+    margin-right: 6px;
+    transform: translatey(-3px);
 }
 
 .app-contact-card .app-badge-sec .badge {
@@ -1473,17 +1491,18 @@
 
 .portal-badge .badge {
     background-color: #f6f2fe;
-    color: #8c5ced;
+    color: #7f4aeb;
 }
 
 .phone-badge .badge {
     background-color: #1294ad17;
-    color: #1294ad;
+    color: #0f788d;
 }
 
 .email-badge .badge{
     background-color: #f3b34e17;
-    color: #E5AB4F;
+    color: #8a5a00;
+    border: 1px solid #f3b34e17;
 }
 
 
@@ -1521,8 +1540,8 @@
 }
 
 .app-search-box .search-form{
-border: 2px solid #000;
-    border-radius: 8px;
+  border: 2px solid #000;
+  border-radius: 8px;
 }
 
 .app-search-box .search-form .form-group {
@@ -1561,10 +1580,38 @@ border: 2px solid #000;
     pointer-events: none; 
 }
 
+.app-search-box .search-input-container .form-control::placeholder {
+        color: rgba(0, 0, 0, 0.35);
+        opacity: 1;
+    }
+
 .app-table .table-container {
   order: 1; 
 }
 
 .pagination-container {
   order: 2;
+}
+
+
+@media screen and (max-width: 400px) {
+    /* This rule activates only on small screens (like iPhone SE/Mobile S 320px) */
+    .app-search-box .search-input-container .form-control {
+        padding-right: 35px;
+        display: block;
+        max-width: 240px;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: none;
+        box-shadow: none;
+    }
+
+    .app-search-box .search-input-container .search-icon {
+        right: 5px !important; /* Pull the icon slightly closer to the edge if the padding change requires it */
+    }
+}
+
+.scenario-section h2{
+    max-width: 660px;
 }
