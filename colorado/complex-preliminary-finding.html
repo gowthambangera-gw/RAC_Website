@@ -41,15 +41,15 @@
                             <a class="nav-link" href="index.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Overview</a>
+                            <a class="nav-link" href="overview.html">Overview</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" aria-expanded="false">
                                 Process
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="automated-review.html">Automated Review</a></li>
-                                <li><a class="dropdown-item" href="complex-review.html">Complex Review</a></li>
+                                <li><a class="dropdown-item active" href="complex-review.html">Complex Review</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -83,65 +83,59 @@
 
         <div class="main-wrapper inner-screen-wrapper">
             <section>
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-11">
-                            <h2><span class="text-highlight">Overview</span></h2>
-                            <p>
-                                The Colorado RAC Program is a federally mandated initiative under the Patient Protection
-                                and Affordable Care Act, designed to identify and recover improper Medicaid payments.
-                                HMS has served as the RAC vendor since [year], partnering with [department name] to
-                                ensure program integrity and financial stewardship. This program supports the state’s
-                                mission to reduce improper payments, enhance program integrity, and provide education
-                                and resources to Medicaid providers.
-                            </p>
-                            <p>
-                                As the state RAC, HMS is authorized to conduct [ post-payment reviews] of claims
-                                submitted for [fee-for-service (FFS)]. The program is designed to identify underpayments
-                                and overpayments, and to assist [department name] in recovering improper payments made
-                                to providers under Medicaid.
-                            </p>
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="complex-review.html">Complex Review</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Preliminary Finding</li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="container">
                     <div class="row">
-                        <div class="col-11">
-                            <h2><span class="text-highlight">Scope of</span> Work</h2>
+                        <div class="col-12 col-md-12 col-xl-11">
+                            <h2><span class="text-highlight">Preliminary </span>Finding</h2>
+                            <p>
+                                You will receive a notification of preliminary findings once HMS and [Department] determine there is a potential overpayment.  This is not an overpayment determination or notice of adverse action, and there has been no discovery of an overpayment pursuant to 42 C.F.R. § 433.316. These are preliminary findings of a potential overpayment only. 
+                            </p>
+                            <p>This notice will include the dates of service that were included in the audit.  Providers will have <strong>30 days</strong>  from the date they receive the Notice of Preliminary Findings to do the following:
+ </p>
                         </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+
+                    <div class="row row-cols-1 row-cols-md-2 gy-4 mt-4">
+
                         <div class="col">
                             <div class="app-card card h-100">
                                 <div class="card-body">
-                                    <div class="card-title">Complex Reviews</div>
-                                    <p class="card-text">Targeted audits requiring medical record review, conducted by
-                                        clinicians and coders.</p>
+                                    <div class="card-title">Automated Audit</div>
+                                    <p class="card-text">Identify claims in the HMS Provider Portal that they disagree with and would like to discuss in an Informal Reconsideration Meeting. An Informal Reconsideration is required for providers to have Formal Appeal Rights.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="app-card card h-100">
                                 <div class="card-body">
-                                    <div class="card-title">Automated Reviews</div>
-                                    <p class="card-text">Data-driven audits that identify improper payments without
-                                        requiring medical records.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="app-card card h-100">
-                                <div class="card-body">
-                                    <div class="card-title">Population Covered</div>
-                                    <p class="card-text">Currently focused on Fee-for-Service (FFS) Medicaid claims.</p>
+                                    <div class="card-title">Complex Audit</div>
+                                    <p class="card-text">
+                                    <ul class="list-style">
+                                        <li>Identify claims in the HMS Provider Portal that they disagree with and would like to discuss during an Exit conference.  Exit Conferences are optional and not required for providers to move to an Informal Reconsideration or Formal Appeal. </li>
+                                        <li>Identify claims in the HMS Provider Portal that they disagree with and would like to discuss in an Informal Reconsideration Meeting. An Informal Reconsideration is required for providers to have Formal Appeal Rights.</li>
+                                    </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
+
+
         </div>
     </main>
     <footer class="site-footer" role="contentinfo" aria-label="Footer">
@@ -221,4 +215,5 @@
     <script src="../shared-assets/javascript/main.js"></script>
     <!--Script Ends-->
 </body>
+
 </html>
